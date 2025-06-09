@@ -1,22 +1,24 @@
-import React from "react";
+import React from 'react';
+import { Settings } from 'lucide-react'; // <-- import the icon
 
-const Sidebar = () => (
-  <aside className="w-64 bg-black text-white h-screen flex flex-col">
-    <div className="p-6 font-bold text-2xl border-b border-white">
-      InkWell Hall
-    </div>
-    <nav className="flex-1 p-4">
-      <ul>
-        <li className="mb-4"><a href="#" className="hover:underline">Dashboard</a></li>
-        <li className="mb-4"><a href="#" className="hover:underline">Collections</a></li>
-        <li className="mb-4"><a href="#" className="hover:underline">Books</a></li>
-        <li className="mb-4"><a href="#" className="hover:underline">Settings</a></li>
-      </ul>
-    </nav>
-    <div className="p-4 border-t border-white text-sm">
-      &copy; 2025 InkWell Hall
-    </div>
-  </aside>
-);
+
+const Sidebar = () => {
+  return (
+    <aside className="w-64 h-screen bg-gray-900 text-white flex flex-col">
+      <div className="p-4 text-xl font-bold">🏛️ Inkwell-Hall</div>
+      <nav className="flex-1">
+        <ul className="space-y-2 p-4">
+          <li className="hover:text-blue-400 cursor-pointer">Dashboard</li>
+          <li className="hover:text-blue-400 cursor-pointer">Collections</li>
+          <li className="hover:text-blue-400 cursor-pointer">Books</li>
+          <li className="hover:text-blue-400 cursor-pointer">Users</li>
+          <li className="hover:text-blue-400 cursor-pointer">Settings</li>
+        </ul>
+      </nav>
+     <button className="p-4 text-white hover:underline text-left">Log Out
+    </button>
+    </aside>
+  );
+};
 
 export default Sidebar;

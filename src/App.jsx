@@ -1,14 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./assets/pages/Dashboard";
+import { Router, Routes, Route } from "react-router";
+import { createBrowserHistory } from "history";
+import Dashboard from "./assets/pages/Dashboard"; // adjust path if needed
 
+const history = createBrowserHistory();
 
-const App = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-    </Routes>
-  </Router>
-);
+const App = () => {
+  return (
+    <Router
+      location={history.location}
+      navigator={history}
+    >
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        {/* Add more <Route /> as needed */}
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
