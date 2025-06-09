@@ -1,11 +1,23 @@
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+]);
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-center text-4xl text-blue-900 mt-20">
-        WELCOME TO INKWELL-HALL{" "}
-      </h1>
+      <RouterProvider router={router} />
     </div>
   );
 };
