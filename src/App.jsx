@@ -1,13 +1,14 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./assets/pages/Dashboard";
 
-const App = () => {
-  return (
-    <div>
-      <h1 className="text-center text-4xl text-blue-900 mt-20">
-        WELCOME TO INKWELL-HALL{" "}
-      </h1>
-    </div>
-  );
-};
+
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
