@@ -14,10 +14,3 @@ html {
   --font-lead-font: "BIZ UDPMincho";
   --font-body-font: "Lato";
 }
-
-.right-side {
-  border-radius: 40px 0px 0px 40px;
-}
-.left-side {
-  border-radius: 0px 40px 40px 0px;
-}

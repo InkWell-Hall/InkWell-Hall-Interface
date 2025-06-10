@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import Home from "./pages/Home";
 
-const routes = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
@@ -13,7 +13,7 @@ const routes = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <RouterProvider router={routes} />
+      <RouterProvider router={router} />
     </>
   );
 };
